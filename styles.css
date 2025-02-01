@@ -1,0 +1,118 @@
+/* Efecto de Brillo Intermitente */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 204, 0, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glow {
+  animation: glow 1.5s infinite alternate;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #003366, #FFCC00); /* Degradado azul y amarillo */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+header {
+  text-align: center;
+  padding: 50px;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  padding: 15px;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #FFCC00;
+}
+
+.section {
+  padding: 40px;
+  margin: 20px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  background-color: #222;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
